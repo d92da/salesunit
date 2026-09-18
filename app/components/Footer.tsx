@@ -7,7 +7,7 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-white/[0.08] bg-black">
-      <div className="mx-auto flex max-w-[1200px] flex-col gap-8 px-5 py-8 sm:px-8 md:flex-row md:items-center md:justify-between lg:px-12">
+      <div className="mx-auto flex max-w-[1200px] flex-col gap-8 px-5 py-[30px] sm:px-8 md:flex-row md:items-center md:justify-between lg:px-12">
         <div>
           <div className="text-sm font-black tracking-[-0.03em]">
             {footer.brand.name}
@@ -37,7 +37,11 @@ export default function Footer() {
             className="flex items-center gap-2 transition-colors hover:text-white"
           >
             {footer.backToTop}
-            <Icon name="chevronRight" size={14} className="-rotate-90" />
+            <Icon
+              name="chevronRight"
+              size={14}
+              className="-rotate-90"
+            />
           </a>
         </div>
       </div>
