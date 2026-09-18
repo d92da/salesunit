@@ -3,6 +3,7 @@ import Icon from "../ui/Icon";
 import {
   card,
   cardNumber,
+  cardUnderline,
   sectionContainer,
   sectionPadding,
 } from "../ui/styles";
@@ -11,7 +12,7 @@ import { home } from "../../data/home";
 function CaseCard({ item }: { item: (typeof home.cases.items)[number] }) {
   return (
     <article
-      className={`${card.glass} flex min-h-[390px] h-full flex-col p-0 sm:min-h-[400px]`}
+      className={`${card.glass} flex min-h-[390px] h-full flex-col p-0 transition-colors duration-300 hover:bg-white/[0.06] sm:min-h-[400px]`}
     >
       {/* Верхняя плашка кейса */}
       <div className="flex h-12 shrink-0 items-center justify-between border-b border-white/[0.08] px-7 sm:px-8">
@@ -45,20 +46,23 @@ function CaseCard({ item }: { item: (typeof home.cases.items)[number] }) {
           {item.results.map(([label, value], index) => (
             <div
               key={label}
-              className={`group flex min-h-[44px] cursor-default items-center gap-3 rounded-[12px] border border-white/[0.06] bg-white/[0.04] px-3.5 py-2.5 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#3B82F6]/20 hover:bg-white/[0.07] sm:min-h-[46px] sm:px-4 ${
+              className={`group relative flex min-h-[44px] cursor-default items-center gap-3 overflow-hidden rounded-[12px] border border-white/[0.06] bg-white/[0.04] px-3.5 py-2.5 transition-colors duration-300 hover:border-white/[0.10] hover:bg-white/[0.07] sm:min-h-[46px] sm:px-4 ${
                 item.results.length % 2 === 1 &&
                 index === item.results.length - 1
                   ? "col-span-2"
                   : ""
               }`}
             >
+              {/* Синяя полоса слева направо */}
+              <div className="absolute bottom-0 left-0 h-[2px] w-full origin-left scale-x-0 bg-[#3B82F6] transition-transform duration-500 ease-out group-hover:scale-x-100" />
+
               <Icon
                 name="check"
                 size={15}
-                className="shrink-0 text-[#3B82F6] transition-transform duration-300 group-hover:scale-110"
+                className="relative z-[1] shrink-0 text-[#3B82F6] transition-transform duration-300 group-hover:scale-110"
               />
 
-              <span className="text-[13px] font-bold leading-[1.25] text-zinc-300 transition-colors duration-300 group-hover:text-white sm:text-[14px]">
+              <span className="relative z-[1] text-[13px] font-bold leading-[1.25] text-zinc-300 transition-colors duration-300 group-hover:text-white sm:text-[14px]">
                 {label}: {value}
               </span>
             </div>
