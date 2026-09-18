@@ -34,7 +34,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden bg-[#050505] py-[30px]"
+      className="relative overflow-hidden bg-[#050505] pt-[94px] pb-[30px]"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_18%,rgba(79,111,255,.16),transparent_34%)]" />
 
