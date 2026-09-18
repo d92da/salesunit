@@ -130,19 +130,19 @@ export default function Hero() {
               <div className="pointer-events-none absolute -inset-3 z-[4] rounded-[42px] border border-white/[0.06]" />
 
               {/* ВЕРХНЯЯ ПЛАШКА */}
-              <div className="absolute right-[19px] top-[24px] z-[3]">
-                <div className="inline-flex h-[36px] items-center gap-2 whitespace-nowrap rounded-[10px] border border-white/10 bg-black/75 px-3 backdrop-blur-[20px]">
-                  <Icon
-                    name="circleDot"
-                    size={11}
-                    className="shrink-0 text-[#3B82F6]"
-                  />
+<div className="absolute right-[14px] top-[24px] z-[3]">
+  <div className="inline-flex h-[36px] items-center gap-2 whitespace-nowrap rounded-[10px] border border-white/10 bg-black/60 px-3 backdrop-blur-[20px]">
+    <Icon
+      name="circleDot"
+      size={11}
+      className="shrink-0 text-[#3B82F6]"
+    />
 
-                  <span className="whitespace-nowrap text-[10px] font-extrabold uppercase tracking-[0.14em]">
-                    Система продаж
-                  </span>
-                </div>
-              </div>
+    <span className="whitespace-nowrap text-[10px] font-normal uppercase tracking-[0.14em]">
+      Система продаж
+    </span>
+  </div>
+</div>
 
               <Image
                 src={hero.photo.src}
@@ -156,17 +156,17 @@ export default function Hero() {
               <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,.55),transparent_40%)]" />
 
               {/* НИЖНЯЯ ПЛАШКА */}
-              <div className="absolute bottom-[20px] left-[20px] z-[3] rounded-[14px] border border-white/[0.08] bg-black/[0.78] px-4 py-3 backdrop-blur-[20px]">
-                <div className="flex flex-col items-start font-bold leading-none tracking-[-0.035em] text-white">
-                  <div className="whitespace-nowrap text-[clamp(12px,2.4cqw,18px)]">
-                    {hero.photo.principleTop}
-                  </div>
+              <div className="absolute bottom-[20px] left-[20px] z-[3] rounded-[14px] border border-white/[0.08] bg-black/[0.63] px-4 py-3 backdrop-blur-[20px]">
+  <div className="flex flex-col items-center text-center font-bold leading-none tracking-[-0.035em] text-white">
+    <div className="whitespace-nowrap text-[clamp(12px,2.4cqw,18px)]">
+      {hero.photo.principleTop}
+    </div>
 
-                  <div className="mt-1.5 whitespace-nowrap text-[clamp(17px,3.8cqw,28px)]">
-                    {hero.photo.principleMain}
-                  </div>
-                </div>
-              </div>
+    <div className="mt-1.5 whitespace-nowrap text-[clamp(17px,3.8cqw,28px)]">
+      {hero.photo.principleMain}
+    </div>
+  </div>
+</div>
             </div>
           </div>
 
