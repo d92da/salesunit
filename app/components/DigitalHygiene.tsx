@@ -1,12 +1,12 @@
 import SectionLabel from "../ui/SectionLabel";
-import { card, cardUnderline, sectionContainer, sectionPadding } from "../ui/styles";
+import { card, cardUnderline, sectionContainer } from "../ui/styles";
 import { home } from "../../data/home";
 
 export default function DigitalHygiene() {
   const { digitalHygiene } = home;
 
   return (
-    <section className={`bg-white text-black ${sectionPadding}`}>
+    <section className="bg-white py-[30px] text-black">
       <div className={sectionContainer}>
         <SectionLabel tone="light">{digitalHygiene.label}</SectionLabel>
 
