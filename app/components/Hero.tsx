@@ -5,7 +5,13 @@ import { card, cardUnderline } from "../ui/styles";
 
 import { home } from "../../data/home";
 
-function Button({ href, children }: { href: string; children: ReactNode }) {
+function Button({
+  href,
+  children,
+}: {
+  href: string;
+  children: ReactNode;
+}) {
   return (
     <a
       href={href}
@@ -34,7 +40,7 @@ export default function Hero() {
 
       <div className="relative z-[2] mx-auto w-full max-w-[1200px] min-w-0 px-5 sm:px-8 lg:px-10">
         <div className="grid min-h-0 items-center gap-12 py-[60px] lg:grid-cols-[minmax(0,1.12fr)_minmax(0,0.88fr)] lg:gap-10 lg:py-0">
-
+          
           {/* LEFT */}
           <div className="relative z-[5] min-w-0 max-w-full overflow-hidden [container-type:inline-size]">
             <div className="mb-6 flex flex-wrap gap-2.5">
@@ -48,25 +54,25 @@ export default function Hero() {
             </div>
 
             <h1 className="m-0 flex min-w-0 max-w-full flex-col overflow-hidden font-bold leading-[0.88] tracking-[-0.045em]">
-              <span className="block min-w-0 max-w-full break-words [overflow-wrap:anywhere] text-[clamp(44px,9cqw,110px)]">
+              <span className="block min-w-0 max-w-full break-words text-[clamp(44px,9cqw,110px)]">
                 {hero.title.top}
               </span>
 
-              <span className="block min-w-0 max-w-full break-words [overflow-wrap:anywhere] text-[clamp(46px,9.3cqw,114px)] text-[#3B82F6]">
+              <span className="block min-w-0 max-w-full break-words text-[clamp(46px,9.3cqw,114px)] text-[#3B82F6]">
                 {hero.title.accent}
               </span>
 
-              <span className="block min-w-0 max-w-full break-words [overflow-wrap:anywhere] text-[clamp(44px,9cqw,110px)]">
+              <span className="block min-w-0 max-w-full break-words text-[clamp(44px,9cqw,110px)]">
                 {hero.title.bottom}
               </span>
             </h1>
 
-            <div className="mt-[22px] max-w-[620px] min-w-0 border-l-2 border-[#3B82F6] pl-[22px]">
-              <p className="m-0 break-words text-[clamp(18px,1.2vw,22px)] font-bold leading-[1.5]">
+            <div className="mt-[22px] max-w-[620px] border-l-2 border-[#3B82F6] pl-[22px]">
+              <p className="m-0 text-[clamp(18px,1.2vw,22px)] font-bold leading-[1.5]">
                 {hero.description[0]}
               </p>
 
-              <p className="mt-2 break-words text-[clamp(15px,1vw,18px)] leading-[1.7] text-zinc-500">
+              <p className="mt-2 text-[clamp(15px,1vw,18px)] leading-[1.7] text-zinc-500">
                 {hero.description[1]}
               </p>
             </div>
@@ -87,6 +93,7 @@ export default function Hero() {
                 className="inline-flex h-14 items-center justify-center gap-2 rounded-full border border-white/10 px-7 font-bold text-white transition-[background] duration-200 hover:bg-white/[0.06]"
               >
                 {hero.actions.secondary}
+
                 <Icon name="arrowDown" size={16} />
               </a>
             </div>
@@ -95,15 +102,15 @@ export default function Hero() {
               {hero.stats.map((stat) => (
                 <div
                   key={stat.value}
-                  className={`${card.glass} min-h-[126px] min-w-0 overflow-hidden p-4 backdrop-blur-[24px]`}
+                  className={`${card.glass} min-w-0 min-h-[126px] p-4 backdrop-blur-[24px]`}
                 >
                   <div className={cardUnderline} />
 
-                  <strong className="block min-w-0 break-words text-[clamp(38px,8cqw,58px)] font-black leading-none">
+                  <strong className="block text-[clamp(38px,8cqw,58px)] font-black leading-none">
                     {stat.value}
                   </strong>
 
-                  <span className="mt-2.5 block min-w-0 break-words text-[clamp(10px,2.1cqw,13px)] leading-[1.45] text-zinc-500">
+                  <span className="mt-2.5 block text-[clamp(10px,2.1cqw,13px)] leading-[1.45] text-zinc-500">
                     {stat.label}
                   </span>
                 </div>
@@ -115,20 +122,23 @@ export default function Hero() {
           <div className="relative min-w-0 max-w-full flex justify-center lg:justify-end lg:translate-x-0 xl:translate-x-0 max-[1100px]:order-first max-[1100px]:translate-x-0">
             <div className="absolute h-[120%] w-[120%] rounded-full bg-[#3B82F6]/15 blur-[180px]" />
 
+            {/* Единый контейнер фотографии.
+                Все плашки находятся внутри него,
+                поэтому двигаются строго вместе с фото. */}
             <div className="relative aspect-[5/6] w-full max-w-[520px] min-w-0 overflow-hidden rounded-[34px] border border-white/[0.08] bg-[#111] shadow-[0_0_0_1px_rgba(255,255,255,.04),0_50px_140px_rgba(0,0,0,.55)]">
-
+              
               <div className="pointer-events-none absolute -inset-3 z-[4] rounded-[42px] border border-white/[0.06]" />
 
-              {/* TOP PHOTO BADGE */}
-              <div className="absolute right-[24px] top-[24px] z-[3]">
-                <div className="inline-flex h-[46px] items-center gap-2 whitespace-nowrap rounded-xl border border-white/10 bg-black/75 px-4 py-3 backdrop-blur-[20px]">
+              {/* ВЕРХНЯЯ ПЛАШКА */}
+              <div className="absolute right-[19px] top-[24px] z-[3]">
+                <div className="inline-flex h-[36px] items-center gap-2 whitespace-nowrap rounded-[10px] border border-white/10 bg-black/75 px-3 backdrop-blur-[20px]">
                   <Icon
                     name="circleDot"
-                    size={12}
+                    size={11}
                     className="shrink-0 text-[#3B82F6]"
                   />
 
-                  <span className="whitespace-nowrap text-[11px] font-extrabold uppercase tracking-[0.16em]">
+                  <span className="whitespace-nowrap text-[10px] font-extrabold uppercase tracking-[0.14em]">
                     Система продаж
                   </span>
                 </div>
@@ -145,19 +155,18 @@ export default function Hero() {
 
               <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,.55),transparent_40%)]" />
 
-              {/* BOTTOM PHOTO BADGE */}
-              <div className="absolute bottom-[24px] left-[24px] z-[3] max-w-[72%] rounded-[22px] border border-white/[0.08] bg-black/[0.78] px-[22px] py-4 backdrop-blur-[24px]">
-                <div className="flex min-w-0 flex-col items-start font-bold leading-none tracking-[-0.035em] text-white">
-                  <div className="min-w-0 max-w-full break-words text-left text-[clamp(16px,4cqw,28px)]">
+              {/* НИЖНЯЯ ПЛАШКА */}
+              <div className="absolute bottom-[20px] left-[20px] z-[3] rounded-[14px] border border-white/[0.08] bg-black/[0.78] px-4 py-3 backdrop-blur-[20px]">
+                <div className="flex flex-col items-start font-bold leading-none tracking-[-0.035em] text-white">
+                  <div className="whitespace-nowrap text-[clamp(12px,2.4cqw,18px)]">
                     {hero.photo.principleTop}
                   </div>
 
-                  <div className="mt-2 min-w-0 max-w-full break-words text-left text-[clamp(24px,6cqw,44px)]">
+                  <div className="mt-1.5 whitespace-nowrap text-[clamp(17px,3.8cqw,28px)]">
                     {hero.photo.principleMain}
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
 
