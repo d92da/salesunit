@@ -34,13 +34,13 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-30 overflow-hidden bg-[#050505] pt-16"
+      className="relative overflow-hidden bg-[#050505] py-[30px]"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_18%,rgba(79,111,255,.16),transparent_34%)]" />
 
       <div className="relative z-[2] mx-auto w-full max-w-[1200px] min-w-0 px-5 sm:px-8 lg:px-10">
-        <div className="grid min-h-30 items-center gap-12 py-[60px] lg:grid-cols-[minmax(0,1.12fr)_minmax(0,0.88fr)] lg:gap-10 lg:py-0">
-          
+        <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1.12fr)_minmax(0,0.88fr)] lg:gap-10">
+
           {/* LEFT */}
           <div className="relative z-[5] min-w-0 max-w-full overflow-hidden [container-type:inline-size]">
             <div className="mb-6 flex flex-wrap gap-2.5">
@@ -126,23 +126,23 @@ export default function Hero() {
                 Все плашки находятся внутри него,
                 поэтому двигаются строго вместе с фото. */}
             <div className="relative aspect-[5/6] w-full max-w-[520px] min-w-0 overflow-hidden rounded-[34px] border border-white/[0.08] bg-[#111] shadow-[0_0_0_1px_rgba(255,255,255,.04),0_50px_140px_rgba(0,0,0,.55)]">
-              
+
               <div className="pointer-events-none absolute -inset-3 z-[4] rounded-[42px] border border-white/[0.06]" />
 
               {/* ВЕРХНЯЯ ПЛАШКА */}
-<div className="absolute right-[14px] top-[24px] z-[3]">
-  <div className="inline-flex h-[36px] items-center gap-2 whitespace-nowrap rounded-[10px] border border-white/10 bg-black/60 px-3 backdrop-blur-[20px]">
-    <Icon
-      name="circleDot"
-      size={11}
-      className="shrink-0 text-[#3B82F6]"
-    />
+              <div className="absolute right-[14px] top-[24px] z-[3]">
+                <div className="inline-flex h-[36px] items-center gap-2 whitespace-nowrap rounded-[10px] border border-white/10 bg-black/60 px-3 backdrop-blur-[20px]">
+                  <Icon
+                    name="circleDot"
+                    size={11}
+                    className="shrink-0 text-[#3B82F6]"
+                  />
 
-    <span className="whitespace-nowrap text-[10px] font-normal uppercase tracking-[0.14em]">
-      Система продаж
-    </span>
-  </div>
-</div>
+                  <span className="whitespace-nowrap text-[10px] font-normal uppercase tracking-[0.14em]">
+                    Система продаж
+                  </span>
+                </div>
+              </div>
 
               <Image
                 src={hero.photo.src}
@@ -157,16 +157,17 @@ export default function Hero() {
 
               {/* НИЖНЯЯ ПЛАШКА */}
               <div className="absolute bottom-[20px] left-[20px] z-[3] rounded-[14px] border border-white/[0.08] bg-black/[0.63] px-4 py-3 backdrop-blur-[20px]">
-  <div className="flex flex-col items-center text-center font-bold leading-none tracking-[-0.035em] text-white">
-    <div className="whitespace-nowrap text-[clamp(12px,2.4cqw,18px)]">
-      {hero.photo.principleTop}
-    </div>
+                <div className="flex flex-col items-center text-center font-bold leading-none tracking-[-0.035em] text-white">
+                  <div className="whitespace-nowrap text-[clamp(12px,2.4cqw,18px)]">
+                    {hero.photo.principleTop}
+                  </div>
 
-    <div className="mt-1.5 whitespace-nowrap text-[clamp(17px,3.8cqw,28px)]">
-      {hero.photo.principleMain}
-    </div>
-  </div>
-</div>
+                  <div className="mt-1.5 whitespace-nowrap text-[clamp(17px,3.8cqw,28px)]">
+                    {hero.photo.principleMain}
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
 
