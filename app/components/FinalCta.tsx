@@ -1,18 +1,17 @@
 import Icon from "../ui/Icon";
-import { sectionPadding } from "../ui/styles";
-
 import { home } from "../../data/home";
-
 
 export default function FinalCta() {
   const { finalCta } = home;
 
   return (
-    <section className={`bg-[#050505] ${sectionPadding}`}>
+    <section className="bg-[#050505] py-[30px]">
       <div className="mx-auto max-w-[1100px] px-5 text-center sm:px-8 lg:px-12">
         <div>
-          <div className="mx-auto mb-8 flex h-14 w-14 items-center justify-center rounded-[16px] transition-transform duration-300 hover:-translate-y-1"
-            style={{ backgroundColor: "#161827", color: "#7398FF" }}>
+          <div
+            className="mx-auto mb-8 flex h-14 w-14 items-center justify-center rounded-[16px] transition-transform duration-300 hover:-translate-y-1"
+            style={{ backgroundColor: "#161827", color: "#7398FF" }}
+          >
             <Icon name="crosshair" size={23} />
           </div>
 
