@@ -48,9 +48,10 @@ export default function Problem() {
   const { problem } = home;
 
   return (
-    <section className="bg-[#050505] py-16 text-white sm:py-20 lg:py-24">
+    <section className="bg-[#050505] py-[30px] text-white">
       <div className={sectionContainer}>
         <div className="grid min-w-0 items-stretch gap-10 lg:grid-cols-[minmax(0,0.82fr)_minmax(0,1.18fr)] lg:gap-16 xl:gap-20">
+
           {/* Левая часть */}
           <div className="flex min-w-0 flex-col [container-type:inline-size]">
             <SectionLabel tone="dark">{problem.label}</SectionLabel>
@@ -59,9 +60,11 @@ export default function Problem() {
               <span className="block min-w-0 max-w-full break-words text-[clamp(2.1rem,8.5cqw,4.6rem)]">
                 {problem.title.main}
               </span>
+
               <span className="mt-1 block min-w-0 max-w-full break-words text-[clamp(1.8rem,6.8cqw,3.55rem)] text-[#3B82F6]">
                 Прошло 2–3 месяца.
               </span>
+
               <span className="mt-1 block min-w-0 max-w-full break-words text-[clamp(2.1rem,8.5cqw,4.6rem)]">
                 Результата нет.
               </span>
@@ -71,13 +74,16 @@ export default function Problem() {
               {problem.description}
             </p>
 
-            {/* Статистика — прижимается к низу и совпадает с нижней границей карточек справа */}
+            {/* Статистика — прижимается к низу и совпадает
+                с нижней границей карточек справа */}
             <div className="mt-auto grid grid-cols-3 gap-2.5 pt-8">
               {problem.stats.map((stat) => (
                 <div
                   key={stat.value}
-                  className="rounded-[14px] border border-[#292929] bg-[#0e0e0e] p-3.5 sm:p-4"
+                  className="group relative overflow-hidden rounded-[14px] border border-[#292929] bg-[#0e0e0e] p-3.5 transition-colors duration-300 hover:bg-[#121212] sm:p-4"
                 >
+                  <div className="absolute bottom-0 left-0 h-[2px] w-full origin-left scale-x-0 bg-[#3B82F6] transition-transform duration-500 ease-out group-hover:scale-x-100" />
+
                   <div className="text-[30px] font-bold leading-none tracking-[-0.04em] sm:text-[34px]">
                     {stat.value}
                   </div>
@@ -115,6 +121,7 @@ export default function Problem() {
               </div>
             ))}
           </div>
+
         </div>
       </div>
     </section>
