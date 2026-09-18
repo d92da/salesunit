@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import SectionLabel from "../ui/SectionLabel";
-import { sectionContainer, sectionPadding } from "../ui/styles";
+import { sectionContainer } from "../ui/styles";
 
 import { home } from "../../data/home";
 
@@ -11,11 +11,10 @@ export default function About() {
   return (
     <section
       id="about"
-      className={`bg-[#f5f5f5] text-black ${sectionPadding}`}
+      className="bg-[#f5f5f5] py-[30px] text-black"
     >
       <div className={sectionContainer}>
         <div className="grid min-w-0 gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-24">
-
           <div className="relative mx-auto w-full max-w-[500px]">
             <div className="absolute -inset-3 rounded-[34px] border border-[#dedede]" />
 
@@ -59,7 +58,6 @@ export default function About() {
               ))}
             </div>
           </div>
-
         </div>
       </div>
     </section>
