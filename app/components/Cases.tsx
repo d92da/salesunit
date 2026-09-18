@@ -52,7 +52,7 @@ function CaseCard({ item }: { item: (typeof home.cases.items)[number] }) {
               }`}
             >
               {/* Синяя полоса только у конкретной плашки */}
-              <div className="absolute bottom-0 left-0 h-[2px] w-full origin-left scale-x-0 bg-[#3B82F6] transition-transform duration-500 ease-out group-hover/result:scale-x-100" />
+              <div className="absolute bottom-0 left-0 h-[2px] w-full origin-left scale-x-0 bg-[#3B82F6] transition-transform duration-400 ease-out group-hover/result:scale-x-100" />
 
               <Icon
                 name="check"
