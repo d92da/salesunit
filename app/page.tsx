@@ -33,9 +33,9 @@ export default function Page() {
 
       <Cases />
 
-      <About />
-
       <FinalStatement />
+
+      <About />
 
       <FinalCta />
 
