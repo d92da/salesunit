@@ -111,7 +111,7 @@ export const home = {
   },
 
   digitalHygiene: {
-    label: "Порядок в работе",
+    label: "Порядок в рабочих процессах",
     title: {
       line1: "CRM показывает",
       line2: "правду",
