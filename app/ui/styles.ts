@@ -42,7 +42,7 @@ export const cardMinHeight = "min-h-[190px]";
  */
 export const cardUnderline =
   "absolute bottom-0 left-0 h-[2px] w-full origin-left scale-x-0 " +
-  "bg-[#3B82F6] transition-transform duration-500 ease-out " +
+  "bg-[#3B82F6] transition-transform duration-400 ease-out " +
   "group-hover:scale-x-100";
 
 /** порядковый номер в углу карточки */
