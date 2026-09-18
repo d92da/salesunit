@@ -22,11 +22,11 @@ const { hero } = home;
 
 return ( <section
    id="top"
-   className="relative min-h-[100svh] overflow-hidden bg-[#050505] pt-16"
+   className="relative min-h-0 overflow-hidden bg-[#050505] pt-16"
  > <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_18%,rgba(79,111,255,.16),transparent_34%)]" />
 
   <div className="relative z-[2] mx-auto w-full max-w-[1200px] min-w-0 px-5 sm:px-8 lg:px-10">
-    <div className="grid min-h-[calc(100svh-64px)] items-center gap-12 py-[60px] lg:grid-cols-[minmax(0,1.12fr)_minmax(0,0.88fr)] lg:gap-10 lg:py-0">
+    <div className="grid min-h-0 items-center gap-12 py-[60px] lg:grid-cols-[minmax(0,1.12fr)_minmax(0,0.88fr)] lg:gap-10 lg:py-0">
       <div
         className="relative z-[5] min-w-0 max-w-full overflow-hidden [container-type:inline-size]"
       >
