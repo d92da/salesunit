@@ -82,7 +82,7 @@ export default function Problem() {
                   key={stat.value}
                   className="group relative overflow-hidden rounded-[14px] border border-[#292929] bg-[#0e0e0e] p-3.5 transition-colors duration-300 hover:bg-[#121212] sm:p-4"
                 >
-                  <div className="absolute bottom-0 left-0 h-[2px] w-full origin-left scale-x-0 bg-[#3B82F6] transition-transform duration-500 ease-out group-hover:scale-x-100" />
+                  <div className="absolute bottom-0 left-0 h-[2px] w-full origin-left scale-x-0 bg-[#3B82F6] transition-transform duration-400 ease-out group-hover:scale-x-100" />
 
                   <div className="text-[30px] font-bold leading-none tracking-[-0.04em] sm:text-[34px]">
                     {stat.value}
