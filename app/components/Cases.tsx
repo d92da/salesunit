@@ -5,7 +5,6 @@ import {
   cardNumber,
   cardUnderline,
   sectionContainer,
-  sectionPadding,
 } from "../ui/styles";
 import { home } from "../../data/home";
 
@@ -79,7 +78,7 @@ export default function Cases() {
   return (
     <section
       id="cases"
-      className={`bg-[#050505] text-white ${sectionPadding}`}
+      className="bg-[#050505] py-[30px] text-white"
     >
       <div className={sectionContainer}>
         <SectionLabel tone="dark">{cases.label}</SectionLabel>
