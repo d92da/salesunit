@@ -7,7 +7,7 @@ export const home = {
     title: {
       top: "РОП – НЕ",
       accent: "АРХИТЕКТОР",
-      bottom: "ПРОДАЖ",
+      bottom: "СИСТЕМНЫХ ПРОДАЖ",
     },
     description: [
       "РОП — администратор уже готовой функции.",
