@@ -1,12 +1,11 @@
-import { sectionContainer, sectionPadding } from "../ui/styles";
+import { sectionContainer } from "../ui/styles";
 import { home } from "../../data/home";
-
 
 export default function FinalStatement() {
   const { finalStatement } = home;
 
   return (
-    <section className={`relative overflow-hidden bg-[#3B82F6] ${sectionPadding}`}>
+    <section className="relative overflow-hidden bg-[#3B82F6] py-[30px]">
       <div className="absolute inset-0 opacity-20">
         <div className="absolute -left-20 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-white blur-[120px]" />
         <div className="absolute -right-20 top-0 h-80 w-80 rounded-full bg-black blur-[120px]" />
