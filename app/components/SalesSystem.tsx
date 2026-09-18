@@ -6,7 +6,6 @@ import {
   cardNumber,
   cardUnderline,
   sectionContainer,
-  sectionPadding,
 } from "../ui/styles";
 import { home } from "../../data/home";
 
@@ -16,7 +15,7 @@ export default function SalesSystem() {
   return (
     <section
       id="system"
-      className={`bg-[#050505] text-white ${sectionPadding}`}
+      className="bg-[#050505] py-[30px] text-white"
     >
       <div className={sectionContainer}>
         <SectionLabel tone="dark">{salesSystem.label}</SectionLabel>
